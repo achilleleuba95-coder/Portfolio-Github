@@ -1,0 +1,319 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+body {
+    background-color: #070712;
+    color: #e0e8ff;
+    font-family: 'Raleway', sans-serif;
+    background-image:
+        /* Petites étoiles discrètes */
+        radial-gradient(1px 1px at 5% 10%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(1px 1px at 12% 35%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 18% 60%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 22% 85%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(1px 1px at 30% 15%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 35% 50%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 42% 75%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(1px 1px at 48% 25%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 55% 90%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 60% 40%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(1px 1px at 67% 65%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 73% 20%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 80% 55%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(1px 1px at 87% 80%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 93% 30%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 97% 70%, rgba(255,255,255,0.7), transparent),
+        /* Étoiles moyennes plus lumineuses */
+        radial-gradient(1.5px 1.5px at 8% 45%, rgba(255,255,255,0.9), transparent),
+        radial-gradient(1.5px 1.5px at 25% 70%, rgba(255,255,255,0.9), transparent),
+        radial-gradient(1.5px 1.5px at 38% 30%, rgba(255,255,255,0.9), transparent),
+        radial-gradient(1.5px 1.5px at 52% 55%, rgba(255,255,255,0.9), transparent),
+        radial-gradient(1.5px 1.5px at 65% 10%, rgba(255,255,255,0.9), transparent),
+        radial-gradient(1.5px 1.5px at 78% 40%, rgba(255,255,255,0.9), transparent),
+        radial-gradient(1.5px 1.5px at 90% 85%, rgba(255,255,255,0.9), transparent),
+        /* Grandes étoiles brillantes */
+        radial-gradient(2px 2px at 15% 25%, white, transparent),
+        radial-gradient(2px 2px at 45% 10%, white, transparent),
+        radial-gradient(2px 2px at 70% 75%, white, transparent),
+        radial-gradient(2px 2px at 88% 15%, white, transparent),
+        radial-gradient(2px 2px at 33% 95%, white, transparent); 
+}
+
+h1, h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 48px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+#accueil, #timeline {
+    scroll-margin-top: 80px;
+}
+
+.logo {
+    color: #f5a623;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    color: #e0e8ff;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #f5a623;
+}
+
+/* Bloc accueil */
+
+.accueil {
+    min-height: 100vh;        /* prend toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* centre verticalement */
+    align-items: center;      /* centre horizontalement */
+    padding: 80px 20px 0;
+    background: radial-gradient(ellipse at center, #0d1b3e 0%, #070712 70%);
+}
+
+main {
+    padding-top: 0;
+}
+
+.surtitre {
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #f5a623;
+    margin-bottom: 16px;
+}
+
+.surtitre2 {
+    text-align: center;
+    color: #6070a0;
+    font-size: 15px;
+    max-width: 600px;
+    margin: 16px auto 32px;
+    line-height: 1.7;
+}
+
+h1 {
+    text-align: center;
+    font-size: 130px;
+    line-height: 1.0;
+    margin-bottom: 24px;
+}
+
+h1 span.dore {
+    color: #f5a623;
+}
+
+/* Timeline */
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+/* ligne verticale */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 400px;
+    bottom: 0;
+    width: 1px;
+    background-color: #2a2a5a;
+    transform: translateX(-50%);
+}
+
+/* Soleil */
+.soleil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.soleil img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 60px #f5a62380, 0 0 120px #f5a62330;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* transition pour le hover */
+}
+
+.soleil img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 80px #f5a623aa, 0 0 160px #f5a62350; /* glow plus intense */
+}
+.soleil h2 {
+    font-size: 28px;
+    color: #f5a623;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.soleil p {
+    max-width: 400px;
+    text-align: center;
+    color: #6070a0;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* planètes */
+.planete {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+    width: 50%;      
+    padding-right: 60px;
+}
+
+/* planètes paires côté droit */
+.planete:nth-child(even) {
+    flex-direction: row;
+    margin-left: 50%; 
+    padding-right: 0;
+    padding-left: 60px;
+}
+
+.planete img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.planete img:hover {
+    transform: scale(1.12);   /* agrandit de 12% au survol */
+}
+
+.planete h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.planete p {
+    color: #6070a0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.planete-texte {
+    max-width: 480px;
+}
+
+.btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 80px;
+    padding: 14px 32px;
+    border: 1px solid #f5a623;
+    color: #f5a623;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #f5a623;
+    color: #070712;
+}
+
+/* glow planètes */
+.mercure img  { box-shadow: 0 0 30px #a0807080; }
+.venus img    { box-shadow: 0 0 30px #d4a06080; }
+.terre img    { box-shadow: 0 0 30px #3a7ab580; }
+.mars img     { box-shadow: 0 0 30px #c1440e80; }
+.jupiter img  { box-shadow: 0 0 30px #c8a87a80; }
+.saturne img  { box-shadow: 0 0 30px #e8d09080; }
+.uranus img   { box-shadow: 0 0 30px #7ec8c880; }
+.neptune img  { box-shadow: 0 0 30px #4060c880; }
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #1a1a3a;
+    color: #2a3460;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+footer .logo {
+    color: #f5a623;
+}
+
+/* case stats planètes */
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.stat {
+    background: #0a0a20;
+    border: 1px solid #2a2a5a;
+    border-radius: 6px;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stat-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #4a5580;
+}
+
+.stat-valeur {
+    font-size: 14px;
+    font-weight: 600;
+    color: #f5a623;
+    font-family: 'Cinzel', serif;
+    white-space: nowrap;
+}
